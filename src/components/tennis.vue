@@ -39,12 +39,13 @@
       ></tennis-player>
     </ul>
 
+     <!-- Event Handling -->
 
+    <!-- a. Inline Handlers -->
+    <button @click="inlineClickHandler">Inline Click Handler</button>
 
-
-
-
-
+    <!-- b. Method Handlers -->
+    <button @click="methodClickHandler">Method Click Handler</button>
 
     </div>
   </template>
@@ -99,6 +100,15 @@ const tennisPlayers = [
   { id: 3, name: "Aditya Singh", is: false},
 ];
 
+const inlineClickHandler = () => {
+  alert("Inline click handler triggered!");
+};
+
+const methodClickHandler = () => {
+  alert("Method click handler triggered!");
+};
+
+
 // e. v-for with a Component
 import TennisPlayer from './TennisPlayer.vue';
 
@@ -116,6 +126,10 @@ const tennisPlayers = [
 
 
   </script>
+  <!-- Include the TennisPlayer component -->
+<script>
+import TennisPlayer from './TennisPlayer.vue';
+</script> 
   
   <style scoped>
   .tennis-page-title {
